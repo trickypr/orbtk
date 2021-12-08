@@ -10,7 +10,7 @@ widget!(
     /// use orbtk::prelude::*;
     /// use orbtk::widgets::themes::*; // This is required for material icons
     ///
-    /// fn build_stack(ctx: &mut BuildContext) -> Entity {
+    /// fn build_button(ctx: &mut BuildContext) -> Entity {
     ///     Button::new()
     ///         .text("Button text")
     ///         .icon(material_icon_font::MD_CHECK)
