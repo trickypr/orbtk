@@ -1,7 +1,22 @@
 use crate::{api::prelude::*, proc_macros::*};
 
 widget!(
-    /// The `Stack` defines a layout that is used to stack its children vertical or horizontal.
+    /// The `Stack` defines a layout that is used to stack its children vertical
+    /// or horizontal, depending on the value of `orientation`. It will default
+    /// to vertical.
+    ///
+    /// ## Example
+    /// ```rs
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_stack(ctx: &mut BuildContext) -> Entity {
+    ///     Stack::new()
+    ///         .orientation(Orientation::Horizontal)
+    ///         .child(TextBlock::new().text("Hello, ").build(ctx))
+    ///         .child(TextBlock::new().text("World!").build(ctx))
+    ///         .build(ctx);
+    /// }
+    /// ```
     ///
     /// **style:** `stack`
     Stack {
