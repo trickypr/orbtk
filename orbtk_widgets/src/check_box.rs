@@ -4,6 +4,17 @@ use crate::{api::prelude::*, prelude::*, proc_macros::*, themes::theme_orbtk::*}
 widget!(
     /// The `CheckBox` widget can be switch its selected state. It contains a selection box and a text.
     ///
+    /// ## Example
+    /// ```rs
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_check_box(ctx: &mut BuildContext) -> Entity {
+    ///     CheckBox::new()
+    ///         .text("Checkbox label")
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `check-box`
     CheckBox: MouseHandler {
         /// Sets or shares the background property.
