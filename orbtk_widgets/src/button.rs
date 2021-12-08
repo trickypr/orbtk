@@ -5,6 +5,29 @@ use crate::{api::prelude::*, prelude::*, proc_macros::*, themes::theme_orbtk::*}
 widget!(
     /// The `Button` widget can be clicked by user. It's used to perform an action.
     ///
+    /// ## Example
+    /// ```rs
+    /// use orbtk::prelude::*;
+    /// use orbtk::widgets::themes::*; // This is required for material icons
+    ///
+    /// fn build_stack(ctx: &mut BuildContext) -> Entity {
+    ///     Button::new()
+    ///         .text("Button text")
+    ///         .icon(material_icon_font::MD_CHECK)
+    ///         .on_enter(|_, _| {
+    ///             println!("Enter Button boundaries");
+    ///         })
+    ///         .on_leave(|_, _| {
+    ///             println!("Leave Button boundaries");
+    ///         })
+    ///         .on_click(|_, _| {
+    ///             println!("Button clicked");
+    ///             false // on_click needs to return a boolean, not sure why
+    ///         })
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `button`
     Button: MouseHandler {
         /// Sets or shares the background property.
