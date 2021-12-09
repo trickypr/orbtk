@@ -117,6 +117,25 @@ widget!(
     /// The `Window` widget provides access to the properties of an application window.
     /// It also contains global properties like keyboard modifier and focused widget.
     ///
+    /// ## Example
+    /// ```
+    /// use orbtk::prelude::*;
+    ///
+    /// fn main() {
+    ///     Application::new()
+    ///         .window(|ctx| {
+    ///             Window::new()
+    ///                 .title("OrbTk")
+    ///                 .resizable(true)
+    ///                 .child(
+    ///                     TextBlock::new("Hello World!").build(ctx)
+    ///                 )
+    ///                 .build(ctx)
+    ///         })
+    ///         .run();
+    /// }
+    /// ```
+    ///
     /// **style:** `window`
     Window<WindowState>: ActivateHandler {
         /// Sets or shares the background property.
