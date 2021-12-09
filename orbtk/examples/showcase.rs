@@ -416,7 +416,6 @@ impl Template for ItemsView {
                             .id(ID_COMBO_BOX)
                             .name(ID_COMBO_BOX)
                             .count(count)
-                            .enabled(false)
                             .items_builder(move |bc, index| {
                                 let text = ItemsView::items_ref(&bc.get_widget(id))[index].clone();
                                 TextBlock::new()
