@@ -47,6 +47,17 @@ impl State for TextBlockState {
 widget!(
     /// The `TextBlock` widget is used to draw text. It is not interactive.
     ///
+    /// ## Example
+    /// ```
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_text_block(ctx: &mut BuildContext) -> Entity {
+    ///     TextBlock::new()
+    ///         .text("Hello World!")
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `text-block`
     TextBlock<TextBlockState> {
         /// Sets or shares the text property.
