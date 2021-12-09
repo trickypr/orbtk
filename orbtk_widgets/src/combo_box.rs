@@ -324,6 +324,28 @@ impl State for ComboBoxState {
 widget!(
     /// The `ComboBox` represents an selection widget with a drop-down list.
     ///
+    /// ## Examples
+    /// Creating items using items_builder:
+    ///
+    /// ```
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_combo_box(ctx: &mut BuildContext) -> Entity {
+    ///    let items = vec!["Item 1", "Item 2", "Item 3"];
+    ///
+    ///     ComboBox::new()
+    ///         .count(items.len())
+    ///         .items_builder(move |ctx, i| {
+    ///             let text: &str = items[i];
+    ///             TextBlock::new()
+    ///                 .text(text)
+    ///                 .v_align("center")
+    ///                 .build(ctx)
+    ///         })
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `combo_box`
     ComboBox<ComboBoxState>: MouseHandler {
         /// Sets or shares the background property.
