@@ -3,6 +3,16 @@ use crate::{api::prelude::*, proc_macros::*, render::prelude::*};
 widget!(
     /// The `ImageWidget` widget is used to draw an image. It is not interactive.
     ///
+    /// ## Example
+    /// ```
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_image_widget(ctx: &mut BuildContext) -> Entity {
+    ///     ImageWidget::new()
+    ///         .image("path/to/image.png")
+    ///         .buid(ctx)
+    /// }
+    ///
     /// **style:** `image-widget`
     ImageWidget {
         /// Sets or shares the image property.
