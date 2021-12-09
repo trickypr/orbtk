@@ -45,6 +45,25 @@ impl State for ItemsWidgetState {
 widget!(
     /// The `ItemsWidget` is a simple no interactive items drawer widget.
     ///
+    /// ## Example
+    /// ```
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_items_widget(ctx: &mut BuildContext) -> Entity {
+    ///    let items = vec!["Item 1", "Item 2", "Item 3"];
+    ///
+    ///    ItemsWidget::new()
+    ///         .count(items.len())
+    ///         .items_builder(|ctx, i| {
+    ///             let text = items[i];
+    ///             TextBlock::new()
+    ///                 .text(text)
+    ///                 .build(ctx)
+    ///         })
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `items_widget`
     ItemsWidget<ItemsWidgetState> {
         /// Sets or shares the background property.
