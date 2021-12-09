@@ -2,6 +2,19 @@ use crate::{api::prelude::*, proc_macros::*};
 
 widget!(
     /// The `Container` layout widget surrounds its child with a padding. Draws a box around the child.
+    ///
+    /// ## Example:
+    /// ```
+    /// use orbtk::prelude::*;
+    ///
+    /// fn build_container(ctx: &mut BuildContext) -> Entity {
+    ///     Container::new()
+    ///         .child(TextBlock::new("Hello World!"))
+    ///         .border_radius(2.0)
+    ///         .background("black")
+    ///         .build(ctx)
+    /// }
+    /// ```
     Container {
         /// Sets or shares the background property.
         background: Brush,
