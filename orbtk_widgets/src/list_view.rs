@@ -286,6 +286,22 @@ impl Template for ListViewItem {
 widget!(
     /// The `ListView` is an items drawer widget with selectable items.
     ///
+    /// ```
+    /// fn build_list_view(ctx: &mut BuildContext) -> Entity {
+    ///    let items = vec!["Item 1", "Item 2", "Item 3"];
+    ///
+    ///    ListView::new()
+    ///         .count(items.len())
+    ///         .items_builder(|ctx, i| {
+    ///             let text = items[i];
+    ///             TextBlock::new()
+    ///                 .text(text)
+    ///                 .build(ctx)
+    ///         })
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `items-widget`
     ListView<ListViewState> : SelectionChangedHandler {
         /// Sets or shares the background property.
