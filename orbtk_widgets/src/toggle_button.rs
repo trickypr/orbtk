@@ -6,6 +6,19 @@ widget!(
     /// The `ToggleButton` widget can be clicked by user and could switch between selected / not selected.
     /// It's used to perform an action.
     ///
+    /// ## Example
+    /// ```
+    /// use orbtk::prelude::*;
+    /// use orbtk::widgets::themes::*; // This is required for material icons
+    ///
+    /// fn build_toggle_button(ctx: &mut BuildContext) -> Entity {
+    ///     ToggleButton::new()
+    ///         .text("ToggleButton")
+    ///         .icon(material_icons_font::MD_ALARM_ON)
+    ///         .build(ctx)
+    /// }
+    /// ```
+    ///
     /// **style:** `toggle-button`
     ToggleButton: MouseHandler {
         /// Sets or shares the background property.
