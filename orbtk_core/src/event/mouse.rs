@@ -346,7 +346,8 @@ pub trait MouseHandler: Sized + Widget {
         })
     }
 
-    /// Insert a mouse up handler.
+    /// Inserts a mouse scrolling behavior. The point provided is the direction
+    /// the mouse is moving
     fn on_scroll<H: Fn(&mut StatesContext, Point) -> bool + 'static>(self, handler: H) -> Self {
         self.insert_handler(ScrollEventHandler {
             handler: Rc::new(handler),
